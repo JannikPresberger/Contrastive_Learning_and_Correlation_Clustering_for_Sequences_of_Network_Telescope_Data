@@ -1,0 +1,14 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "andres_graph"
+version = "0.0.1"
+
+[tool.scikit-build]
+# Erzwingt den Release-Mode für CMake
+cmake.build-type = "Release"
+
+# Optional: Übergibt Optimierungs-Flags direkt an den Compiler
+cmake.args = ["-DCMAKE_BUILD_TYPE=Release"]
